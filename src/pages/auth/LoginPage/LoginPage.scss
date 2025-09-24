@@ -1,0 +1,83 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.landing-page {
+  font-family: "Myriad Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  .main-container {
+    background-color: #dde1e6;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .content-box {
+    min-width: 900px;
+    height: 90vh;
+    background: white;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .background-image {
+    background-image: url('@/assets/images/landscape.png');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 30% 100%);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .content-section {
+    padding: 3rem;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+
+    img {
+      max-width: 160px;
+      width: 115px;
+    }
+  }
+
+  .text-section {
+    margin-bottom: 2rem;
+    padding-left: 5px ;
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #282828;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 39px;
+      font-weight: bold;
+      color: #282828;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 22px;
+      color: #282828;
+    } 
+  }
+
+  .button-section {
+    .btn-primary {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      background-color: #003C71;
+      border-color: #003C71;
+
+      &:hover {
+        background-color: darken(#003C71, 10%);
+        border-color: darken(#003C71, 10%);
+      }
+    }
+  }
+}

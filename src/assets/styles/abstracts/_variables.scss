@@ -1,0 +1,54 @@
+// VARIABLES
+$primary: #003C71;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-auth: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+// Typography
+$font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-size-base: 1rem;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$line-height-base: 1.6;
+
+// Spacing
+$spacer: 1rem;
+
+// Border radius
+$border-radius: 0.375rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xxl: 2rem;
+
+// Shadows
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+
+// Animation durations
+$animation-duration-base: 0.3s;
+
+// Component variables
+$btn-border-radius: $border-radius;
+$btn-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$btn-transition: all 0.15s ease-in-out;
+
+$input-border-radius: $border-radius;
+$input-focus-border-color: rgba($primary, 0.5);
+$input-focus-box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+
+$card-border-radius: $border-radius-lg;
+$card-shadow: $box-shadow-sm;

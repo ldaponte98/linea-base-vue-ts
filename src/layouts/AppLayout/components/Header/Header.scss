@@ -1,0 +1,129 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.app-header {
+  background-color: #003C71;
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Sección de la marca (izquierda)
+  .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 32px;
+    padding: 0 8px;
+
+    .brand-title {
+      font-family: "Myriad Pro", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      line-height: normal;
+    }
+
+    .divider {
+      width: 1px;
+      height: 24px;
+      background-color: #FFFFFF;
+    }
+  }
+
+  // Sección de usuario (derecha)
+  .user-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    min-height: 1px;
+    gap: 16px;
+
+    .dropdown {
+      position: relative;
+    }
+
+    .user-button {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid #FFFFFF;
+      background-color: #003C71;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 16px;
+      box-sizing: border-box;
+      
+      span {
+        font-family: "Quicksand", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: darken(#003C71, 5%);
+      }
+
+      &:active {
+        background-color: darken(#003C71, 10%);
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      min-width: 180px;
+      z-index: 1000;
+
+      .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 16px;
+        border: none;
+        background: none;
+        color: #282828;
+        font-size: 14px;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        i {
+          font-size: 16px;
+        }
+
+        &:hover {
+          background-color: #f8f9fa;
+          color: #003C71;
+        }
+
+        &:active {
+          background-color: #e9ecef;
+        }
+      }
+
+      .username-head{
+        margin-top: 5px;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        font-size: smaller;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

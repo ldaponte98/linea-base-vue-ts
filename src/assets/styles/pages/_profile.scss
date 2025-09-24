@@ -1,0 +1,6 @@
+// PROFILE PAGE
+@use '../abstracts/mixins' as *;
+
+.profile-page {
+  @include fade-in();
+}

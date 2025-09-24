@@ -1,0 +1,45 @@
+// PROFILE PAGE COMPONENT STYLES
+@use '../../../assets/styles/abstracts/variables' as *;
+@use '../../../assets/styles/abstracts/mixins' as *;
+
+.profile-page {
+  @include fade-in();
+  
+  .avatar-large {
+    @include avatar(100px);
+    background: $gradient-primary;
+    font-size: 2.5rem;
+    border: 4px solid white;
+    box-shadow: $box-shadow;
+    
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    
+    img {
+      border: 4px solid white;
+      box-shadow: $box-shadow;
+    }
+  }
+  
+  .card {
+    @include card-hover;
+  }
+  
+  .form-control {
+    border-radius: $input-border-radius;
+    
+    &:focus {
+      @include form-control-focus($primary);
+    }
+  }
+  
+  .btn-sm.rounded-circle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

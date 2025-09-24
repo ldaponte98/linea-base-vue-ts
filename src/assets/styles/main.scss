@@ -1,0 +1,24 @@
+// MAIN SCSS FILE - @use rules first
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+@use 'layouts/navigation';
+@use 'layouts/footer';
+@use 'layouts/auth' as auth-layouts;
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/alerts';
+@use 'pages/dashboard';
+@use 'pages/auth' as auth-pages;
+@use 'pages/profile';
+@use 'pages/not-found';
+@use 'themes/default';
+@use 'utilities/helpers';
+@use 'utilities/shame';
+
+// Bootstrap import after @use rules
+@import 'vendors/bootstrap';

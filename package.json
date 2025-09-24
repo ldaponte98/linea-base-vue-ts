@@ -1,0 +1,36 @@
+{
+  "name": "infocuenca-front",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.7.0",
+    "axios": "^1.6.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0",
+    "pinia": "^2.1.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vitejs/plugin-vue-jsx": "^4.2.0",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.9.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^3.0.7"
+  }
+}

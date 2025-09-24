@@ -1,0 +1,29 @@
+// BASE BUTTON COMPONENT STYLES
+@use '../../assets/styles/abstracts/variables' as *;
+@use '../../assets/styles/abstracts/mixins' as *;
+
+.btn {
+  position: relative;
+  font-weight: $font-weight-light;
+  border-radius: $btn-border-radius;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  font-size: $font-size-base;
+  background-color: $primary;
+  border-color: $primary;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: $btn-box-shadow;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+}

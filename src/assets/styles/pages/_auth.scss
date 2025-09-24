@@ -1,0 +1,7 @@
+// AUTH PAGES
+@use '../abstracts/mixins' as *;
+
+.login-page,
+.register-page {
+  @include fade-in();
+}

@@ -1,0 +1,6 @@
+// DASHBOARD PAGE
+@use '../abstracts/mixins' as *;
+
+.dashboard-page {
+  @include fade-in();
+}

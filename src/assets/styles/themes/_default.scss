@@ -1,0 +1,8 @@
+// DEFAULT THEME
+@use '../abstracts/variables' as *;
+@use 'sass:color';
+
+:root {
+  --bs-primary-rgb: #{color.channel($primary, "red")}, #{color.channel($primary, "green")}, #{color.channel($primary, "blue")};
+  --bs-secondary-rgb: #{color.channel($secondary, "red")}, #{color.channel($secondary, "green")}, #{color.channel($secondary, "blue")};
+}

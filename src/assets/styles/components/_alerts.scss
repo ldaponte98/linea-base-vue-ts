@@ -1,0 +1,6 @@
+// ALERTS
+@use '../abstracts/variables' as *;
+
+.alert {
+  border-radius: $border-radius-lg;
+}

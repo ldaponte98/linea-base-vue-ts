@@ -1,0 +1,45 @@
+@use '../../assets/styles/abstracts/variables' as *;
+@use '../../assets/styles/abstracts/mixins' as *;
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.show {
+    display: block;
+  }
+
+  .modal-content {
+    border: none;
+    box-shadow: $box-shadow-lg;
+    border-radius: $border-radius-lg;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid rgba($secondary, 0.2);
+    padding: 1rem 1.5rem;
+
+    .modal-title {
+      font-weight: $font-weight-semibold;
+      color: $primary;
+    }
+
+    .btn-close {
+      transition: $transition-base;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+    color: gray;
+  }
+
+  .modal-footer {
+    border-top: 1px solid rgba($secondary, 0.2);
+    padding: 1rem 1.5rem;
+  }
+}

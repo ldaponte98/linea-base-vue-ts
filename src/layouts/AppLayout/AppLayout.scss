@@ -1,0 +1,176 @@
+// APP LAYOUT COMPONENT STYLES
+@use '../../assets/styles/abstracts/variables' as *;
+@use '../../assets/styles/abstracts/mixins' as *;
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #E5E5E5;
+
+  .container{
+    margin-left: 0px;
+    padding-right: 12px;
+    max-width: 100% !important;
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-left: 350px; // Match SideMenu expanded width
+    transition: margin-left 0.3s ease;
+    @include fade-in();
+
+    &.menu-collapsed {
+      margin-left: 120px; // Match collapsed SideMenu width
+    }
+
+    // No cambiar margen cuando el menú está en hover
+    // El z-index del menú manejará la superposición
+    
+    @include bootstrap.media-breakpoint-down(md) {
+      margin-left: 0;
+      
+      &.menu-collapsed {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.navbar {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-weight: $font-weight-medium;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    transition: $transition-base;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    &.active {
+      background-color: rgba(255, 255, 255, 0.2);
+      font-weight: $font-weight-semibold;
+    }
+  }
+  
+  // Estilos para el dropdown del usuario
+  .dropdown-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    
+    .user-avatar {
+      color: rgba(255, 255, 255, 0.9);
+      
+      img {
+        object-fit: cover;
+      }
+    }
+    
+    .user-info {
+      line-height: 1.2;
+      
+      div {
+        font-size: 0.875rem;
+      }
+      
+      small {
+        font-size: 0.75rem;
+      }
+    }
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    // Animación de carga
+    .spin {
+      animation: spin 1s linear infinite;
+    }
+  }
+  
+  // Estilos del dropdown menu
+  .dropdown-menu {
+    border: none;
+    box-shadow: $box-shadow-lg;
+    border-radius: $border-radius-lg;
+    padding: 0.5rem 0;
+    min-width: 280px;
+    
+    .dropdown-header {
+      padding: 1rem 1.5rem 0.5rem;
+      background-color: $light;
+      border-bottom: 1px solid rgba($secondary, 0.2);
+      margin-bottom: 0.5rem;
+      
+      .user-avatar-large {
+        color: $primary;
+        
+        img {
+          object-fit: cover;
+        }
+      }
+      
+      .badge {
+        font-size: 0.625rem;
+      }
+    }
+    
+    .dropdown-item {
+      padding: 0.75rem 1.5rem;
+      transition: $transition-base;
+      
+      &:hover {
+        background-color: rgba($primary, 0.1);
+        color: $primary;
+      }
+      
+      &.text-danger:hover {
+        background-color: rgba($danger, 0.1);
+        color: $danger;
+      }
+      
+      i {
+        width: 16px;
+        text-align: center;
+      }
+      
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+footer {
+  .bi-heart {
+    animation: pulse 2s infinite;
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+  .navbar {
+    .dropdown-toggle {
+      .user-info {
+        display: none;
+      }
+    }
+    
+    .dropdown-menu {
+      min-width: 250px;
+    }
+  }
+}

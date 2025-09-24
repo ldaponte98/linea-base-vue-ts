@@ -1,0 +1,28 @@
+// RESET & BASE
+@use '../abstracts/variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $dark;
+  background-color: $light;
+}
+
+.force-show{
+  display: block !important;
+}

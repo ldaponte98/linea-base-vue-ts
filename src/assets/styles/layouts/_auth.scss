@@ -1,0 +1,7 @@
+// AUTH LAYOUTS
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.auth-layout {
+  @include gradient-bg($gradient-auth);
+}

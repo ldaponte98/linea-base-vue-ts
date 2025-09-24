@@ -1,0 +1,10 @@
+// HELPER UTILITIES
+@use '../abstracts/mixins' as *;
+
+.d-flex-center {
+  @include flex-center;
+}
+
+.avatar {
+  @include avatar(40px);
+}

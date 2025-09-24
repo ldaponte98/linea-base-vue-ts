@@ -1,0 +1,13 @@
+// BOOTSTRAP CUSTOMIZATION
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+
+$enable-gradients: true;
+$enable-shadows: true;
+$enable-rounded: true;
+
+@import 'bootstrap/scss/bootstrap';

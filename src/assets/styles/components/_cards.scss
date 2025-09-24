@@ -1,0 +1,11 @@
+// CARDS
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  border: none;
+  
+  @include card-hover;
+}

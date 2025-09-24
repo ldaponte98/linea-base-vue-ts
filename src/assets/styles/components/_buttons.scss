@@ -1,0 +1,13 @@
+// BUTTONS
+@use '../abstracts/variables' as *;
+
+.btn {
+  border-radius: $btn-border-radius;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  font-weight: $font-weight-medium;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+}
